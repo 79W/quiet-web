@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>Hexo 问题解答文档-Quiet</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+
+<link rel="stylesheet" href="/css/index.css">
+
+
+
+<meta name="keywords" content="MD,文章,Hexo,">
+<meta name="description" content="Hexo 问题解答文档">
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+
+<script src="/js/hljs.min.js"></script>
+ 
+<script>hljs.initHighlightingOnLoad();</script>
+
+	<meta name="generator" content="Hexo 6.2.0"></head>
+
+	<body>
+		
+	<div class="header">
+		<div class="header-top" id="header-top">
+			<div class="h-left">
+				<a href="/">
+					<img src="/image/logo.png" alt="Quiet">
+				</a>
+			</div>
+			<div class="h-right">
+				<ul>
+					
+						
+								<li>
+									<a href="/">
+										HOME
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/archives">
+										ARCHIVE
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/categories">
+										CATEGORIES
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/tags">
+										TAGS
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/links">
+										LINKS
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/about">
+										ABOUT
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+				</ul>
+			</div>
+			<div class="h-right-close">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+					<path fill="none" d="M0 0h24v24H0z" />
+					<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div class="sidebar">
+    <div class="topo">
+        <h2>Joey</h2>
+    </div>
+    <ul>
+        
+        <li>
+            <a href="/">HOME</a>
+        </li>
+        
+        <li>
+            <a href="/archives">ARCHIVE</a>
+        </li>
+        
+        <li>
+            <a href="/categories">CATEGORIES</a>
+        </li>
+        
+        <li>
+            <a href="/tags">TAGS</a>
+        </li>
+        
+        <li>
+            <a href="/links">LINKS</a>
+        </li>
+        
+        <li>
+            <a href="/about">ABOUT</a>
+        </li>
+        
+    </ul>
+    <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
+    </div>
+</div>
+<div class='shelter'>
+</div>
+<style>
+    .shelter{
+        background-color: #333;
+        opacity:0.5;
+        cursor: pointer;
+        display: none; 
+        position: fixed;
+        left: 0;
+        top: 0; 
+        right: 0;
+        bottom: 0;
+        z-index: 1998;
+    }
+    .sidebar {
+        width: 0;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        z-index: 1999;
+        text-align: center;
+        box-shadow: -6px 0 20px rgba(98, 94, 94, .815)
+    }
+
+    .topo {
+        width: 100%;
+        height: 200px;
+        background: url(https://api.ixiaowai.cn/gqapi/gqapi.php) no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        display: flex;
+        align-items: flex-end
+    }
+
+    .topo h2 {
+        color: #fff;
+        z-index: 1;
+        position: relative;
+        margin: 0 0 10px 10px;
+        font-size: 1.2em;
+        box-sizing: border-box
+    }
+
+    .topo:before {
+        content: '';
+        background-image: url(/image/pattern.png);
+        background-repeat: repeat;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1
+    }
+
+    .sidebar ul {
+        width: 100%;
+        margin-top: 50px
+    }
+
+    .sidebar ul li {
+        height: 50px;
+        list-style: none;
+        font-size: 1.2em;
+        text-align: right;
+        margin-right: 10px
+    }
+
+    .sidebar ul li a {
+        display: grid;
+        color: #5d606a;
+        text-overflow: ellipsis;
+        width: 100%;
+        text-decoration: none
+    }
+
+    .my_foot {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        position: absolute;
+        bottom: 0
+    }
+
+    .my_foot a {
+        text-decoration: none;
+        margin-right: 10px;
+        display: inline-block
+    }
+
+    .my_foot a img {
+        width: 30px;
+        height: 30px
+    }
+</style>
+
+<script>
+    $( function () {
+	$( '.h-right-close>svg' )
+		.click( function () {
+			$( '.sidebar' )
+				.animate( {
+					width: "66%"
+				}, 500 );
+			$( '.shelter' )
+				.fadeIn( "slow" )
+		} );
+	$( '.shelter' )
+		.click( function ( e ) {
+			$( '.sidebar' )
+				.animate( {
+					width: "0"
+				}, 500 );
+			$( '.shelter' )
+				.fadeOut( "slow" )
+		} )
+} )
+
+</script>
+
+<div class="post">
+    <div class="post-header-background post-header-img"
+    style="background: url('https://api.ixiaowai.cn/gqapi/gqapi.php')" 
+>
+    <div class="post-header-background-content">
+        <ul class="post-header-tag">
+            
+            
+            <li><a href="/tags/MD">MD</a></li>
+            
+            <li><a href="/tags/文章">文章</a></li>
+            
+            <li><a href="/tags/Hexo">Hexo</a></li>
+            
+            
+        </ul>
+        
+        <h1>Hexo 问题解答文档</h1>
+        <div class="post-header-info">
+            <div class="post-header-info-author">
+                
+                    <svg t="1604839279282" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="2901" width="20" height="20">
+                        <path
+                            d="M513 956.3c-247.7 0-448-200.3-448-448S265.3 66.2 513 66.2s448 200.3 448 448-200.3 442.1-448 442.1z m0-830.9c-212.2 0-388.8 170.7-388.8 388.8C124.2 726.3 294.9 903 513 903c212.2 0 388.8-170.7 388.8-388.8S725.2 125.4 513 125.4z m0 430.2c-94.2 0-170.7-76.5-170.7-170.7S418.8 207.8 513 207.8s170.7 76.5 170.7 170.7S607.2 555.6 513 555.6z m0-289.1c-64.6 0-112 52.8-112 112s47.4 117.9 112 117.9 112-52.8 112-112-47.4-117.9-112-117.9z m0 689.8c-135.7 0-259-58.7-341.9-158.9l-11.8-17.8 11.8-17.8c76.5-117.9 206.2-188.5 347.8-188.5 135.7 0 265 64.6 341.9 182.6l11.8 17.8-11.8 17.8C778 897.1 648.7 956.3 513 956.3zM230.3 773.2C300.9 849.7 406.9 897 513 897c112 0 218.1-47.4 288.6-129.8-70.5-88.2-170.7-135.6-282.7-135.6s-218.1 53.3-288.6 141.6z"
+                            p-id="2902" fill="#ffffff"></path>
+                    </svg>
+                    
+                <span class="post-header-info-author-text"> <a href="../../about">Joey</a></span>
+                <div class="post-header-info-author-categories">
+                    
+                         <a href="../../categories/HEXO/" target="_blank" >HEXO</a>
+                    
+                </div>
+                <p>2018-11-15 22:55:07</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="post-content" id="content">
+  
+  <div id="article" class="post-content-info">
+    
+
+    <p>在使用 Hexo 时，您可能会遇到一些问题，下列的常见问题解答可能会对您有所帮助。如果您在这里找不到解答，可以在 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a> 或 <a target="_blank" rel="noopener" href="https://groups.google.com/group/hexo">Google Group</a> 上提问。</p>
+<h2 id="YAML-解析错误"><a href="#YAML-解析错误" class="headerlink" title="YAML 解析错误"></a>YAML 解析错误</h2><pre><code class="plain">JS-YAML: incomplete explicit mapping pair; a key node is missed at line 18, column 29:
+      last_updated: Last updated: %s
+</code></pre>
+<p>如果 YAML 字符串中包含冒号（<code>:</code>）的话，请加上引号。</p>
+<pre><code class="plain">JS-YAML: bad indentation of a mapping entry at line 18, column 31:
+      last_updated:&quot;Last updated: %s&quot;
+</code></pre>
+<p>请确认您使用空格进行缩进（Soft tab），并确认冒号后有加上一个空格。</p>
+<p>您可参阅 <a target="_blank" rel="noopener" href="http://www.yaml.org/spec/1.2/spec.html">YAML 规范</a> 以取得更多信息。</p>
+<h2 id="EMFILE-错误"><a href="#EMFILE-错误" class="headerlink" title="EMFILE 错误"></a>EMFILE 错误</h2><pre><code class="plain">Error: EMFILE, too many open files
+</code></pre>
+<p>虽然 Node.js 有非阻塞 I&#x2F;O，同步 I&#x2F;O 的数量仍被系统所限制，在生成大量静态文件的时候，您可能会碰到 EMFILE 错误，您可以尝试提高同步 I&#x2F;O 的限制数量来解决此问题。</p>
+<pre><code class="bash">$ ulimit -n 10000
+</code></pre>
+<p>（这一命令只对Linux系统有效）</p>
+<p><strong>Error: cannot modify limit</strong></p>
+<p>If you encounter the following error:</p>
+<pre><code class="bash">$ ulimit -n 10000
+ulimit: open files: cannot modify limit: Operation not permitted
+</code></pre>
+<p>It means some system-wide configurations are preventing <code>ulimit</code> to being increased to a certain limit.</p>
+<p>To override the limit:</p>
+<ol>
+<li>Add the following line to “&#x2F;etc&#x2F;security&#x2F;limits.conf”:</li>
+</ol>
+<pre><code>* - nofile 10000
+
+# &#39;*&#39; applies to all users and &#39;-&#39; set both soft and hard limits
+</code></pre>
+<ul>
+<li>The above setting may not apply in some cases, ensure “&#x2F;etc&#x2F;pam.d&#x2F;login” and “&#x2F;etc&#x2F;pam.d&#x2F;lightdm” have the following line. (Ignore this step if those files do not exist)</li>
+</ul>
+<pre><code>session required pam_limits.so
+</code></pre>
+<ol start="2">
+<li>If you are on a <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Systemd#Adoption">systemd-based</a> distribution, systemd may override “limits.conf”. To set the limit in systemd, add the following line in “&#x2F;etc&#x2F;systemd&#x2F;system.conf” and “&#x2F;etc&#x2F;systemd&#x2F;user.conf”:</li>
+</ol>
+<pre><code>DefaultLimitNOFILE=10000
+</code></pre>
+<ol start="3">
+<li>Reboot</li>
+</ol>
+<h2 id="Git-部署问题"><a href="#Git-部署问题" class="headerlink" title="Git 部署问题"></a>Git 部署问题</h2><h3 id="RPC-failed"><a href="#RPC-failed" class="headerlink" title="RPC failed"></a>RPC failed</h3><pre><code class="plain">error: RPC failed; result=22, HTTP code = 403
+
+fatal: &#39;username.github.io&#39; does not appear to be a git repository
+</code></pre>
+<p>请确认您已经在电脑上 <a target="_blank" rel="noopener" href="https://help.github.com/articles/set-up-git">配置 git</a>，或改用 HTTPS 库（repository）地址。</p>
+<h3 id="Error-ENOENT-no-such-file-or-directory"><a href="#Error-ENOENT-no-such-file-or-directory" class="headerlink" title="Error: ENOENT: no such file or directory"></a>Error: ENOENT: no such file or directory</h3><p>如果你遇到了这个错误，有可能是你的文件名、分类或者标签的名字混淆了大写和小写，你可以尝试检查每一个标签和分类的名称，是否大小写一致来修复这一问题。</p>
+<h2 id="服务器问题"><a href="#服务器问题" class="headerlink" title="服务器问题"></a>服务器问题</h2><pre><code class="plain">Error: listen EADDRINUSE
+</code></pre>
+<p>您可能同时开启两个 Hexo 服务器，或者有其他应用程序正在占用相同的端口，请尝试修改 <code>port</code> 参数，或是在启动 Hexo 服务器时加上 <code>-p</code> 选项。</p>
+<pre><code class="bash">$ hexo server -p 5000
+</code></pre>
+<h2 id="插件安装问题"><a href="#插件安装问题" class="headerlink" title="插件安装问题"></a>插件安装问题</h2><pre><code class="plain">npm ERR! node-waf configure build
+</code></pre>
+<p>当您尝试安装以 C&#x2F;C++ 或其他非 JavaScript 语言所编写的插件时，可能会遇到此类问题，请确认您已经在电脑上安装相对应的编译器。</p>
+<h2 id="DTrace-错误-（Mac-OS-X）"><a href="#DTrace-错误-（Mac-OS-X）" class="headerlink" title="DTrace 错误 （Mac OS X）"></a>DTrace 错误 （Mac OS X）</h2><pre><code class="plain">&#123; [Error: Cannot find module &#39;./build/Release/DTraceProviderBindings&#39;] code: &#39;MODULE_NOT_FOUND&#39; &#125;
+&#123; [Error: Cannot find module &#39;./build/default/DTraceProviderBindings&#39;] code: &#39;MODULE_NOT_FOUND&#39; &#125;
+&#123; [Error: Cannot find module &#39;./build/Debug/DTraceProviderBindings&#39;] code: &#39;MODULE_NOT_FOUND&#39; &#125;
+</code></pre>
+<p>DTrace 安装可能有错误 , 使用下列命令:</p>
+<pre><code class="sh">$ npm install hexo --no-optional
+</code></pre>
+<p>参考 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796">#1326</a></p>
+<h2 id="在-Jade-或-Swig-遍历资料"><a href="#在-Jade-或-Swig-遍历资料" class="headerlink" title="在 Jade 或 Swig 遍历资料"></a>在 Jade 或 Swig 遍历资料</h2><p>Hexo 使用 <a target="_blank" rel="noopener" href="https://github.com/hexojs/warehouse">Warehouse</a> 存储资料，它不是一般数组所以必须先进行类型转型才能遍历。</p>
+<pre><code>&#123;% for post in site.posts.toArray() %&#125;
+&#123;% endfor %&#125;
+</code></pre>
+<h2 id="资料没有更新"><a href="#资料没有更新" class="headerlink" title="资料没有更新"></a>资料没有更新</h2><p>有时资料可能没有被更新，或是生成的文件与修改前的相同，您可以尝试清除缓存并再执行一次。</p>
+<pre><code class="bash">$ hexo clean
+</code></pre>
+<h2 id="命令没有执行"><a href="#命令没有执行" class="headerlink" title="命令没有执行"></a>命令没有执行</h2><p>如果你除了 <code>hexo help</code>、<code>hexo init</code> 和 <code>hexo version</code> 以外不能执行任何命令、并且你的任何命令都只返回了 <code>hexo help</code> 的内容，这可能是由于 <code>package.json</code> 中缺乏 <code>hexo</code> 字段导致的。</p>
+<pre><code class="json">&#123;
+  &quot;hexo&quot;: &#123;
+    &quot;version&quot;: &quot;3.9.0&quot;
+  &#125;
+&#125;
+</code></pre>
+<h2 id="泄露（Escape）内容"><a href="#泄露（Escape）内容" class="headerlink" title="泄露（Escape）内容"></a>泄露（Escape）内容</h2><p>Hexo 使用 <a target="_blank" rel="noopener" href="https://mozilla.github.io/nunjucks/">Nunjucks</a> 来解析文章（旧版本使用 <a target="_blank" rel="noopener" href="http://paularmstrong.github.io/swig/">Swig</a>，两者语法类似），内容若包含 <code>&#123;&#123; &#125;&#125;</code> 或 <code>&#123;% %&#125;</code> 可能导致解析错误，您可以用 <a href="/docs/tag-plugins#Raw"><code>raw</code></a> 标签包裹，single backtick <code>`&#123;&#123; &#125;&#125;`</code> 或 triple backtick 来避免潜在问题发生。<br>Alternatively, Nunjucks tags can be disabled through the renderer’s option (if supported), <a href="/api/renderer#Disable-Nunjucks-tags">API</a> or <a href="/docs/front-matter">front-matter</a>.</p>
+<pre><code>
+Hello {{ world }}
+
+</code></pre>
+<pre><code>```
+Hello &#123;&#123; world &#125;&#125;
+```
+</code></pre>
+<h2 id="ENOSPC-错误-（Linux）"><a href="#ENOSPC-错误-（Linux）" class="headerlink" title="ENOSPC 错误 （Linux）"></a>ENOSPC 错误 （Linux）</h2><p>运行 <code>$ hexo server</code> 命令有时会返回这样的错误：</p>
+<pre><code>Error: watch ENOSPC ...
+</code></pre>
+<p>它可以用过运行 <code>$ npm dedupe</code> 来解决，如果不起作用的话，可以尝试在 Linux 终端中运行下列命令：</p>
+<pre><code>$ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p
+</code></pre>
+<p>这将会提高你能监视的文件数量。</p>
+<h2 id="EMPERM-Error-Windows-Subsystem-for-Linux"><a href="#EMPERM-Error-Windows-Subsystem-for-Linux" class="headerlink" title="EMPERM Error (Windows Subsystem for Linux)"></a>EMPERM Error (Windows Subsystem for Linux)</h2><p>在执行 <code>hexo server</code> 后返回如下错误：</p>
+<pre><code>Error: watch /path/to/hexo/theme/ EMPERM
+</code></pre>
+<p>这是由于你使用的 WSL 版本不支持监听文件系统改动。 最新版的 WSL 已经解决了这一问题。</p>
+<p>您也仍然可以通过先使用 <code>hexo g</code> 生成文件然后将其作为静态服务器运行来从 WSL 环境运行服务器：</p>
+<pre><code class="sh">$ hexo generate
+$ hexo server -s
+</code></pre>
+<p>关于 WSL 的这一 Issue 请前往 <a target="_blank" rel="noopener" href="https://github.com/Microsoft/BashOnWindows/issues/216">https://github.com/Microsoft/BashOnWindows/issues/216</a> 查看。目前这一问题已经得到了解决。</p>
+<h2 id="模板渲染错误"><a href="#模板渲染错误" class="headerlink" title="模板渲染错误"></a>模板渲染错误</h2><p>有的时候你在执行 <code>hexo generate</code> 时会返回以下错误信息：</p>
+<pre><code>FATAL Something&#39;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
+Template render error: (unknown path)
+</code></pre>
+<p>一种可能的原因是你的文件中存在一些不可被识别的字符，比如不可见的零宽度字符。</p>
+
+  </div>
+  <div id="gitalk-container"></div>
+</div>
+
+<script>
+  
+Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+  dragToClose: true,
+  Toolbar: true,
+  closeButton: "top",
+  Image: {
+    zoom: true,
+  },
+  on: {
+    initCarousel: (fancybox) => {
+      const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+    "Carousel.change": (fancybox, carousel, to, from) => {
+      const slide = carousel.slides[to];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+  },
+});
+</script>
+
+<style>
+    #noneimg img {
+        display: none;
+        z-index: 9999;
+        /* width: 600px !important; */
+        min-width: 0%;
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 0px;
+        position: fixed;
+        box-shadow: 0 0 0px #c3c3c300 !important;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+    }
+
+    @media screen and (max-width:600px) {
+        #noneimg img {
+            max-width: 88%
+        }
+    }
+</style>
+
+    <div class="post-paging">
+    
+    <a href="/2018/11/15/Hexo/asset-folders/">
+        <div class="post-paging-last">
+            <span>上一篇</span>
+            <p>Hexo 资源文件夹文档</p>
+        </div>
+    </a>
+    
+
+    
+    <a href="/2018/11/15/Hexo/writing/">
+        <div class="post-paging-next">
+            <span>下一篇</span>
+            <p>Hexo 写作文档</p>
+        </div>
+    </a>
+    
+</div>
+</div>
+		
+<div class="footer">
+	<div class="Copyright">
+		©2022 By Joey. 主题：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/qiaobug/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+	</div>
+</div>
+
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script>
+
+
+<!-- Baidu Analytics -->
+<script defer>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?54349cec0854b9df321e151206e51aac";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+    <!-- Gitalk -->
+    <script>
+        const data = '{"clientID":"fd3fc87bb1749762d94e","clientSecret":"f67232c3f8e3e1fe755417fe655b11507e64bca2","repo":"quiet-web","owner":"79W","admin":"79W"}'
+        const gitalk = new Gitalk({
+            ...JSON.parse( data),
+            id:location.pathname,
+            distractionFreeMode:false
+        })
+        gitalk.render('gitalk-container')
+    </script>
+
+<script>
+	console.log('\n %c Hexo-Quiet 主题 %c https://github.com/QiaoBug/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
+</script>
+	</body>
+</html>
+
