@@ -167,16 +167,16 @@
         z-index: 1998;
     }
     .sidebar {
-        width: 0;
+        width: 66%;
         height: 100%;
         position: fixed;
         top: 0;
-        right: 0;
+        right: -100%;
         bottom: 0;
         background: #fff;
         z-index: 1999;
         text-align: center;
-        box-shadow: -6px 0 20px rgba(98, 94, 94, .815)
+        box-shadow: -6px 0 20px rgba(98, 94, 94, .815);
     }
 
     .topo {
@@ -257,7 +257,7 @@
 		.click( function () {
 			$( '.sidebar' )
 				.animate( {
-					width: "66%"
+					right: "0"
 				}, 500 );
 			$( '.shelter' )
 				.fadeIn( "slow" )
@@ -266,7 +266,7 @@
 		.click( function ( e ) {
 			$( '.sidebar' )
 				.animate( {
-					width: "0"
+					right: "-100%"
 				}, 500 );
 			$( '.shelter' )
 				.fadeOut( "slow" )
@@ -290,33 +290,9 @@
 			<div class="post-card" id="content">
 				
 					<div class="post-card-display">
-						<a href="/2018/11/15/Hexo/front-matter/">
+						<a href="/2018/11/15/Hexo/generating/">
 							<h2 class="post-card-title">
-								Hexo Front-matter文档
-							</h2>
-							
-								<img src="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/20220906120014.png" alt="Quiet">
-							
-						</a>
-						<div class="post-card-meat">
-							<div class="meat-info">
-								<div class="info-auth">
-										<a href="categories/HEXO/">
-											HEXO
-										</a>
-								</div>
-								<div class="info-data">
-									2018-11-15
-								</div>
-							</div>
-							<div class="meat-type"></div>
-						</div>
-					</div>
-				
-					<div class="post-card-display">
-						<a href="/2018/11/15/Hexo/gitlab-pages/">
-							<h2 class="post-card-title">
-								将 Hexo 部署到 GitLab Pages 文档
+								Hexo 生成文件文档
 							</h2>
 							
 								<img src="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/20220906120014.png" alt="Quiet">
@@ -362,9 +338,9 @@
 					</div>
 				
 					<div class="post-card-display">
-						<a href="/2018/11/15/Hexo/index/">
+						<a href="/2018/11/15/Hexo/gitlab-pages/">
 							<h2 class="post-card-title">
-								Hexo 网站文档
+								将 Hexo 部署到 GitLab Pages 文档
 							</h2>
 							
 								<img src="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/20220906120014.png" alt="Quiet">
@@ -389,6 +365,30 @@
 						<a href="/2018/11/15/Hexo/helpers/">
 							<h2 class="post-card-title">
 								Hexo 辅助函数（Helpers）文档
+							</h2>
+							
+								<img src="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/20220906120014.png" alt="Quiet">
+							
+						</a>
+						<div class="post-card-meat">
+							<div class="meat-info">
+								<div class="info-auth">
+										<a href="categories/HEXO/">
+											HEXO
+										</a>
+								</div>
+								<div class="info-data">
+									2018-11-15
+								</div>
+							</div>
+							<div class="meat-type"></div>
+						</div>
+					</div>
+				
+					<div class="post-card-display">
+						<a href="/2018/11/15/Hexo/index/">
+							<h2 class="post-card-title">
+								Hexo 网站文档
 							</h2>
 							
 								<img src="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/20220906120014.png" alt="Quiet">

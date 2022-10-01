@@ -168,16 +168,16 @@
         z-index: 1998;
     }
     .sidebar {
-        width: 0;
+        width: 66%;
         height: 100%;
         position: fixed;
         top: 0;
-        right: 0;
+        right: -100%;
         bottom: 0;
         background: #fff;
         z-index: 1999;
         text-align: center;
-        box-shadow: -6px 0 20px rgba(98, 94, 94, .815)
+        box-shadow: -6px 0 20px rgba(98, 94, 94, .815);
     }
 
     .topo {
@@ -258,7 +258,7 @@
 		.click( function () {
 			$( '.sidebar' )
 				.animate( {
-					width: "66%"
+					right: "0"
 				}, 500 );
 			$( '.shelter' )
 				.fadeIn( "slow" )
@@ -267,7 +267,7 @@
 		.click( function ( e ) {
 			$( '.sidebar' )
 				.animate( {
-					width: "0"
+					right: "-100%"
 				}, 500 );
 			$( '.shelter' )
 				.fadeOut( "slow" )
@@ -1465,19 +1465,19 @@ Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
 
     <div class="post-paging">
     
-    <a href="/2018/11/15/Hexo/index/">
+    <a href="/2018/11/15/Hexo/gitlab-pages/">
         <div class="post-paging-last">
             <span>上一篇</span>
-            <p>Hexo 网站文档</p>
+            <p>将 Hexo 部署到 GitLab Pages 文档</p>
         </div>
     </a>
     
 
     
-    <a href="/2018/11/15/Hexo/internationalization/">
+    <a href="/2018/11/15/Hexo/index/">
         <div class="post-paging-next">
             <span>下一篇</span>
-            <p>Hexo 国际化（i18n）网站文档</p>
+            <p>Hexo 网站文档</p>
         </div>
     </a>
     

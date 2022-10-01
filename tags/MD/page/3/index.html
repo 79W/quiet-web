@@ -168,16 +168,16 @@
         z-index: 1998;
     }
     .sidebar {
-        width: 0;
+        width: 66%;
         height: 100%;
         position: fixed;
         top: 0;
-        right: 0;
+        right: -100%;
         bottom: 0;
         background: #fff;
         z-index: 1999;
         text-align: center;
-        box-shadow: -6px 0 20px rgba(98, 94, 94, .815)
+        box-shadow: -6px 0 20px rgba(98, 94, 94, .815);
     }
 
     .topo {
@@ -258,7 +258,7 @@
 		.click( function () {
 			$( '.sidebar' )
 				.animate( {
-					width: "66%"
+					right: "0"
 				}, 500 );
 			$( '.shelter' )
 				.fadeIn( "slow" )
@@ -267,7 +267,7 @@
 		.click( function ( e ) {
 			$( '.sidebar' )
 				.animate( {
-					width: "0"
+					right: "-100%"
 				}, 500 );
 			$( '.shelter' )
 				.fadeOut( "slow" )
@@ -312,18 +312,13 @@
             <time>11-15</time>
         </a>
         
-        <a href="/2018/11/15/Hexo/templates/">
-            <span>Hexo 模板文档</span>
-            <time>11-15</time>
-        </a>
-        
-        <a href="/2018/11/15/Hexo/variables/">
-            <span>Hexo 全局变量文档</span>
-            <time>11-15</time>
-        </a>
-        
         <a href="/2018/11/15/Hexo/syntax-highlight/">
             <span>Hexo 代码高亮文档</span>
+            <time>11-15</time>
+        </a>
+        
+        <a href="/2018/11/15/Hexo/templates/">
+            <span>Hexo 模板文档</span>
             <time>11-15</time>
         </a>
         
@@ -334,6 +329,11 @@
         
         <a href="/2018/11/15/Hexo/troubleshooting/">
             <span>Hexo 问题解答文档</span>
+            <time>11-15</time>
+        </a>
+        
+        <a href="/2018/11/15/Hexo/variables/">
+            <span>Hexo 全局变量文档</span>
             <time>11-15</time>
         </a>
         

@@ -168,16 +168,16 @@
         z-index: 1998;
     }
     .sidebar {
-        width: 0;
+        width: 66%;
         height: 100%;
         position: fixed;
         top: 0;
-        right: 0;
+        right: -100%;
         bottom: 0;
         background: #fff;
         z-index: 1999;
         text-align: center;
-        box-shadow: -6px 0 20px rgba(98, 94, 94, .815)
+        box-shadow: -6px 0 20px rgba(98, 94, 94, .815);
     }
 
     .topo {
@@ -258,7 +258,7 @@
 		.click( function () {
 			$( '.sidebar' )
 				.animate( {
-					width: "66%"
+					right: "0"
 				}, 500 );
 			$( '.shelter' )
 				.fadeIn( "slow" )
@@ -267,7 +267,7 @@
 		.click( function ( e ) {
 			$( '.sidebar' )
 				.animate( {
-					width: "0"
+					right: "-100%"
 				}, 500 );
 			$( '.shelter' )
 				.fadeOut( "slow" )
@@ -317,23 +317,23 @@
             <time>11-15</time>
         </a>
         
-        <a href="/2018/11/15/Hexo/generating/">
-            <span>Hexo 生成文件文档</span>
-            <time>11-15</time>
-        </a>
-        
         <a href="/2018/11/15/Hexo/front-matter/">
             <span>Hexo Front-matter文档</span>
             <time>11-15</time>
         </a>
         
-        <a href="/2018/11/15/Hexo/gitlab-pages/">
-            <span>将 Hexo 部署到 GitLab Pages 文档</span>
+        <a href="/2018/11/15/Hexo/generating/">
+            <span>Hexo 生成文件文档</span>
             <time>11-15</time>
         </a>
         
         <a href="/2018/11/15/Hexo/github-pages/">
             <span>将 Hexo 部署到 GitHub Pages 文档</span>
+            <time>11-15</time>
+        </a>
+        
+        <a href="/2018/11/15/Hexo/gitlab-pages/">
+            <span>将 Hexo 部署到 GitLab Pages 文档</span>
             <time>11-15</time>
         </a>
         
